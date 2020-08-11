@@ -1,14 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+
+import Sections from '../views/Sections.vue'
+import Section from '../views/Section.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Sections',
+    component: Sections
+  },
+  {
+    path: "/sections/:id",
+    name: "Section",
+    component: Section
   },
   {
     path: '/about',

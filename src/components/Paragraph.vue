@@ -18,7 +18,7 @@
       <v-btn text small color="primary" @click="saveAndClose">Save and Close</v-btn>
       <v-btn text small color="secondary" @click="editing=false">Close</v-btn>   
       <v-btn text small color="warning" @click="deleteParagraph">Delete</v-btn>     
-    </div>     
+    </div>      
 
   </v-container>  
 </template>

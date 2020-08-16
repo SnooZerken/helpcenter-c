@@ -10,8 +10,7 @@
 
     <v-row cols="12">
       <v-col>
-        <v-toolbar dense>
-
+        <v-toolbar dense>       
           <v-text-field @keyup.enter.native="findByTitle" v-model="searchedTitle" single-line hide-details label="search"></v-text-field>
           <v-btn class="ml-2" small @click="findByTitle">Search</v-btn>
           <v-btn class="ml-2 blue lighten-2" small @click="adding=true">New</v-btn>
@@ -31,26 +30,28 @@
     </v-row>    
 
     <v-simple-table>
-        <template v-slot:default>
-          <thead>
-            <tr>
-              <th class="text-left">ID</th>
-              <th class="text-left">Title</th>
-              <th class="text-richt">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="section in sections" :key="section.id">
-              <td>{{ section.id }}</td>
-              <td>{{ section.title }}</td>
-              <td> 
-                  <v-btn :to="'/sections/' + section.id" icon color="blue lighten-2"><v-icon>mdi-eye-circle</v-icon></v-btn>
-                  <v-btn @click="deleteSection(section.id)" icon color="red lighten-2"><v-icon>mdi-delete</v-icon></v-btn>
-              </td>
-            </tr>
-          </tbody>
-        </template>
-      </v-simple-table>      
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th class="text-left">ID</th>
+            <th class="text-left">Title</th>
+            <th class="text-richt">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="section in sections" :key="section.id">
+            <td>{{ section.id }}</td>
+            <td>{{ section.title }}</td>
+            <td> 
+                <v-btn :to="'/sections/' + section.id" icon color="blue lighten-2"><v-icon>mdi-eye-circle</v-icon></v-btn>
+                <v-btn @click="deleteSection(section.id)" icon color="red lighten-2"><v-icon>mdi-delete</v-icon></v-btn>
+            </td>
+          </tr>
+        </tbody>
+      </template>
+    </v-simple-table> 
+
+     
 
   </v-container>
 </template>

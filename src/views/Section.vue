@@ -10,7 +10,6 @@
     <v-row cols="12">
       <v-col>
         <v-toolbar dense>
-            <v-btn small to="/"><v-icon class="mr-2" small>mdi-format-list-bulleted</v-icon>sections</v-btn>
             <v-btn small class="ml-2" @click="adding=true"><v-icon class="mr-2" small>mdi-plus</v-icon>paragraph</v-btn>
         </v-toolbar>
       </v-col>
@@ -57,11 +56,10 @@
     <v-row cols="12">
       <v-col>
         <v-toolbar dense>
-            <v-btn small to="/"><v-icon class="mr-2" small>mdi-format-list-bulleted</v-icon>sections</v-btn>
             <v-btn small class="ml-2" @click="adding=true"><v-icon class="mr-2" small>mdi-plus</v-icon>paragraph</v-btn>
         </v-toolbar>
       </v-col>
-    </v-row>    
+    </v-row>       
      
   </v-container>
 </template>

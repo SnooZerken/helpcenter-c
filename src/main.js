@@ -23,7 +23,8 @@ Vue.use(VueKeycloakJs, {
   },
   config: {
     url: 'http://keycloak-eprochelpcenter.apps.us-east-1.starter.openshift-online.com/auth/',
-    clientId: 'helpcenter-c-dev',
+    //clientId: 'helpcenter-c-dev',
+    clientId: 'helpcenter-c-prod',
     realm: 'helpcenter'
   },
   onReady: (keycloak) => {
